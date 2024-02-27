@@ -1,4 +1,4 @@
-# Symfony 6 login
+# Symfony 6 entities
 
 <img src="https://jorgebenitezlopez.com/github/symfony.jpg">
 <img src="https://img.shields.io/static/v1?label=PHP&message=Symfony&color=green">
@@ -10,10 +10,10 @@
 - Composer: https://getcomposer.org/download/
 - Symfony 6.4: https://symfony.com/releases/6.4
 
-# Instalación de Symfony y paquetes
+# Instalación de Symfony y paquetes desde 0
 
-- symfony new back --version=6.4
-- cd back
+- symfony new entities --version=6.4
+- cd entities
 - composer require symfony/maker-bundle --dev  (Comandos para construir)
 - composer require symfony/orm-pack (ORM para pegar la base de datos)
 - composer require symfony/profiler-pack --dev (Profiler para tener información)
@@ -22,7 +22,7 @@
 - composer require twig-bundle (Para plantillas) 
 - composer require security-csrf api "lexik/jwt-authentication-bundle" symfony/security-bundle (Para seguridad. Si falla en Windows en el php.ini permitir la extension sodium. También puede ser necesaria la extensión composer requiere ext-openssl) 
 
-# Pasos para crear entidades relacionadas
+# Pasos para crear entidades relacionadas desde 0
 
 - Por facilidad de trabajo la base de datos será un sqlite en el propio repo. Modifico el .env para trabajar con sqlite https://www.sqlite.org/index.html
 <kbd><img src="https://jorgebenitezlopez.com/github/sqlite.png"></kbd>
@@ -39,6 +39,12 @@
 - Pintar las tablas relacionadas. Gracias la ORM podemos acceder a las propiedades de tablas relacinadas como si fueran propiedades de la misma entidad: ``query.site.name``. Cuando las propiedades relacionadas con otras tablas son múltiples hay que iterarlas para pintarlas. Ver el index de query para ver cómo las recorre twig. 
 - Para mejorar la selección múltiple utilizo select2. Una librería de JS que nos permite incluso buscar en un select: form_themes: https://select2.org/getting-started/installatio. Para ello añadimos los CDN en el twig y el JS que lo dispara.
 - Para la búsqueda en el front he utilizado: https://datatables.net/ 
+
+# Pasos para instalar el proyecto
+
+- gh repo clone MAD-DW-TI-P2/symfony-6-entities
+- composer install
+- symfony server:start
 
 # TODO
 
