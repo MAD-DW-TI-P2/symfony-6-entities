@@ -28,7 +28,7 @@
 <kbd><img src="https://jorgebenitezlopez.com/github/sqlite.png"></kbd>
 - Pensar lo que queremos construir como entidades con sus porpuedades y métodos y relaciones entre ellas. Primero construyo las que no tienen campos relacionados y por último las que tienen campos que se relacionan con otras entidades
 - Pensar en las relaciones. Es una relacción mucho a muchos Symfony crea una tabla intermedia
-<kbd><img src="https://jorgebenitezlopez.com/tiddlywiki/pro/meme-relaciones.png"></kbd>
+<kbd style="width:100%" ><img style="width:100%"  src="https://jorgebenitezlopez.com/tiddlywiki/pro/meme-relaciones.png"></kbd>
 <kbd><img src="https://jorgebenitezlopez.com/tiddlywiki/pro/relacionestablas.png"></kbd>
 - Crear la entidades y relaciones: ``php bin/console make:entity``
 - Actualizo la Base de datos: ``php bin/console doctrine:schema:update --force``. Puedo revisar que las relaciones entre tablas son correctas accediendo a la base de datos
